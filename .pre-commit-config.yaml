@@ -1,0 +1,19 @@
+repos:
+    - repo: https://github.com/djlint/djLint
+      rev: v1.36.4
+      hooks:
+          - id: djlint-reformat
+            #- id: djlint
+    - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+      rev: v2.15.0
+      hooks:
+          - id: pretty-format-yaml
+            args: [--autofix, --preserve-quotes, --offset=2]
+    - repo: https://github.com/python-jsonschema/check-jsonschema
+      rev: 0.33.2
+      hooks:
+          - id: check-github-workflows
+    - repo: meta
+      hooks:
+          - id: check-hooks-apply
+          - id: check-useless-excludes
